@@ -1,9 +1,9 @@
 # Appium Gradle Plugin
-Gradle plugin that start/stop Appium server on test task execution.
+Gradle plugin that start/stop Appium server on test task execution. Check it out on [Gralde Plugins repo](https://plugins.gradle.org/plugin/com.zasadnyy.appium).
 
 ## Features
-* Automaticaly start and stop Appium server on each test task
-* Start or stop Appium server manualy
+* Automatically start and stop Appium server on each test task
+* Start or stop Appium server manually
 * Configure Appium server address and port
 
 ## Tasks
@@ -52,4 +52,3 @@ Check the [demo project](https://github.com/zasadnyy/appium-gradle-plugin/tree/m
 
 ## License
 The project is published under the [Apache 2](https://github.com/zasadnyy/appium-gradle-plugin/blob/master/LICENSE) license. Feel free to clone and modify repo as you want, but don't forget to add a reference to the author.
-
