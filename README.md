@@ -19,7 +19,7 @@ Plugin adds following tasks to gradle project
 
     ```groovy
     plugins {
-        id "com.zasadnyy.appium" version "1+"
+        id "com.zasadnyy.appium" version "1.0.1"
     }
     ```
 
