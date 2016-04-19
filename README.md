@@ -9,12 +9,10 @@ Gradle plugin that start/stop Appium server on test task execution. Check it out
 ## Tasks
 Plugin adds following tasks to gradle project
 
-    ```
     Appium tasks
     ------------
     startAppiumServer - Start Appium server with provided configuration
     stopAppiumServer - Stop Appium server with provided configuration
-    ```
 
 ## Usage
 1. Apply appium plugin in `build.gradle`
