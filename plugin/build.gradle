@@ -1,0 +1,57 @@
+plugins {
+	id 'com.gradle.plugin-publish' version '0.9.4'
+	id 'maven-publish'
+	id 'groovy'
+}
+
+ext {
+	pluginVersion = '1.0.1'
+	pluginMavenGroup = 'com.zasadnyy'
+	pluginId = "${pluginMavenGroup}.appium"
+	pluginName = 'Appium Gradle Plugin'
+	pluginDescription = 'Gradle plugin that start/stop Appium server on test task execution'
+	pluginVcsUrl = 'https://github.com/zasadnyy/appium-gradle-plugin'
+	pluginTags = ['appium', 'testing']
+}
+
+group = project.pluginMavenGroup
+version = project.pluginVersion
+
+repositories {
+	mavenCentral()
+	jcenter()
+}
+
+dependencies {
+	compile gradleApi()
+	compile localGroovy()
+	compile 'com.github.genium-framework:Appium-Support:1.0.5'
+}
+
+/**
+ * Publish configuration to Maven local during development
+ */
+publishing {
+	publications {
+		maven(MavenPublication) {
+			from components.java
+		}
+	}
+}
+
+/**
+ * Publish configuration to Gradle plugin repository
+ */
+pluginBundle {
+	website = project.pluginVcsUrl
+	vcsUrl = project.pluginVcsUrl
+	description = project.pluginDescription
+	tags = project.pluginTags
+
+	plugins {
+		appiumPlugin {
+			id = project.pluginId
+			displayName = project.pluginName
+		}
+	}
+}
