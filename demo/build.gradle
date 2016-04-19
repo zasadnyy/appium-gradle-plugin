@@ -6,7 +6,7 @@ buildscript {
 		}
 	}
 	dependencies {
-		classpath "gradle.plugin.com.zasadnyy:appium-gradle-plugin:1+"
+		classpath "gradle.plugin.com.zasadnyy:appium-gradle-plugin:1.0.1"
 	}
 }
 
