@@ -1,0 +1,5 @@
+demo/.gradle
+demo/.idea
+plugin/.gradle
+plugin/.idea
+plugin/build
