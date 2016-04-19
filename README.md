@@ -6,6 +6,16 @@ Gradle plugin that start/stop Appium server on test task execution.
 * Start or stop Appium server manualy
 * Configure Appium server address and port
 
+## Tasks
+Plugin adds following tasks to gradle project
+
+    ```
+    Appium tasks
+    ------------
+    startAppiumServer - Start Appium server with provided configuration
+    stopAppiumServer - Stop Appium server with provided configuration
+    ```
+
 ## Usage
 1. Apply appium plugin in `build.gradle`
 
@@ -41,5 +51,5 @@ Check the [demo project](https://github.com/zasadnyy/appium-gradle-plugin/tree/m
 
 
 ## License
-The project is published under the [Apache 2](https://github.com/zasadnyy/unity-gradle-plugin/blob/master/LICENSE) license. Feel free to clone and modify repo as you want, but don't forget to add a reference to the author.
+The project is published under the [Apache 2](https://github.com/zasadnyy/appium-gradle-plugin/blob/master/LICENSE) license. Feel free to clone and modify repo as you want, but don't forget to add a reference to the author.
 
