@@ -42,8 +42,8 @@ class AppiumPlugin implements Plugin<Project> {
 			description 'Start Appium server with provided configuration'
 		}
 		startServerTask.doLast {
-			println("Starting Appium server at ${project.appium.address}:${project.appium.port}")
-			appiumServer.startServer()
+			println("Starting Appium server at ${project.appium.address}:${project.appium.port} with timeout ${-> project.appium.startTimeout}")
+			appiumServer.startServer(project.appium.startTimeout)
 		}
 
 		def stopServerTask = project.task('stopAppiumServer') {
@@ -68,6 +68,6 @@ class AppiumPlugin implements Plugin<Project> {
 		serverArguments.setArgument("--address", "${-> project.appium.address}")
 		serverArguments.setArgument("--port", "${-> project.appium.port}");
 
-		return new AppiumServer(new File("/usr/local/bin/node"), new File("/usr/local/bin/appium"), serverArguments)
+		return new AppiumServer(new File("${-> project.appium.nodeBasePath}"), new File("${-> project.appium.appiumBasePath}"), serverArguments)
 	}
 }

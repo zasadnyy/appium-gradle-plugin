@@ -19,6 +19,9 @@ package com.zasadnyy.gradle.appium
 class AppiumExtension {
 	String address = '0.0.0.0'
 	String port = '4723'
+	long startTimeout = 30000
+	String nodeBasePath = "/usr/local/bin/node"
+	String appiumBasePath = "/usr/local/bin/appium"
 
 	void address(address) {
 		this.address = address
@@ -26,5 +29,17 @@ class AppiumExtension {
 
 	void port(def port) {
 		this.port = port.toString()
+	}
+
+	void startTimeout(def startTimeout){
+		this.startTimeout = startTimeout
+	}
+
+	void nodeBasePath(nodeBasePath){
+		this.nodeBasePath = nodeBasePath
+	}
+
+	void appiumBasePath(appiumBasePath){
+		this.appiumBasePath = appiumBasePath
 	}
 }

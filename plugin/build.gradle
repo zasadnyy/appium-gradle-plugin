@@ -1,3 +1,9 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
 plugins {
 	id 'com.gradle.plugin-publish' version '0.9.4'
 	id 'maven-publish'
@@ -5,7 +11,7 @@ plugins {
 }
 
 ext {
-	pluginVersion = '1.0.1'
+	pluginVersion = '1.0.2'
 	pluginMavenGroup = 'com.zasadnyy'
 	pluginId = "${pluginMavenGroup}.appium"
 	pluginName = 'Appium Gradle Plugin'

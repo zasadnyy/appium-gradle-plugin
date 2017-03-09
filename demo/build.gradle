@@ -1,12 +1,10 @@
 buildscript {
 	repositories {
-		maven {
-//			mavenLocal()
-			url "https://plugins.gradle.org/m2/"
-		}
+		mavenLocal()
+		mavenCentral()
 	}
 	dependencies {
-		classpath "gradle.plugin.com.zasadnyy:appium-gradle-plugin:1.0.1"
+		classpath "com.zasadnyy:appium-gradle-plugin:1.0.2"
 	}
 }
 
@@ -16,4 +14,7 @@ apply plugin: 'com.zasadnyy.appium'
 appium {
 	address "127.0.0.1"
 	port 4723
+	startTimeout 60000
+	nodeBasePath "/usr/local/bin/node"
+	appiumBasePath "/usr/local/bin/appium"
 }
