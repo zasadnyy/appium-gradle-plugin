@@ -29,6 +29,9 @@ Plugin adds following tasks to gradle project
     appium {
         address "127.0.0.1"
         port 4723
+        startTimeout 60000
+        nodeBasePath "/usr/local/bin/node"
+        appiumBasePath "/usr/local/bin/appium"
     }
     ```
 1. Build. Test. Enjoy.
@@ -39,6 +42,11 @@ Check the [demo project](https://github.com/zasadnyy/appium-gradle-plugin/tree/m
 
 
 ## Changelog
+
+#### v1.0.2 - March 9, 2017
+  * Added server start timeout
+  * Added node path config
+  * Added appium path config
 
 #### v1.0.1 - April 19, 2016
   * Added default Appium server config
